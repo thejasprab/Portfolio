@@ -1,32 +1,13 @@
-/* Smooth scrolling */
 html {
     scroll-behavior: smooth;
-  }
-  
-  /* Global Styles */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
   }
   
   body {
     font-family: 'Poppins', sans-serif;
     color: #333;
     background-color: #fafafa;
-    line-height: 1.6;
+    margin: 0;
     overflow-x: hidden;
-  }
-  
-  /* Fade-in animation */
-  .fade-in {
-    opacity: 0;
-    animation: fadeIn 1.2s ease-in forwards;
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
   }
   
   /* Navbar */
@@ -35,12 +16,11 @@ html {
     justify-content: space-between;
     align-items: center;
     padding: 20px 60px;
-    background: linear-gradient(90deg, #0b132b, #1c2541);
+    background: linear-gradient(90deg, #280c0c, #130d38);
     color: #fff;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   }
   
   .navbar nav a {
@@ -57,10 +37,14 @@ html {
   
   /* Hero Section */
   .hero {
-    background: linear-gradient(135deg, #0b132b, #1c2541, #3a506b);
-    color: #fff;
-    padding: 140px 20px;
+    min-height: 90vh;
+    background: linear-gradient(135deg, #2b0b0b, #130d38, #3a506b);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    color: #fff;
     background-size: 200% 200%;
     animation: gradientMove 10s ease infinite;
   }
@@ -73,7 +57,7 @@ html {
   
   .hero h2 {
     font-size: 2.8rem;
-    animation: fadeIn 1.5s ease forwards;
+    margin-bottom: 15px;
   }
   
   .hero span {
@@ -81,19 +65,18 @@ html {
   }
   
   .hero p {
-    margin: 15px 0 30px;
     font-size: 1.1rem;
-    animation-delay: 0.3s;
+    margin-bottom: 30px;
   }
   
   .btn {
     background: #00aaff;
     color: white;
-    padding: 10px 25px;
+    padding: 12px 30px;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 500;
-    transition: all 0.3s;
+    transition: all 0.3s ease-in-out;
   }
   
   .btn:hover {
@@ -101,12 +84,10 @@ html {
     transform: scale(1.05);
   }
   
-  /* Section base */
+  /* Section */
   .section {
     padding: 80px 10%;
     text-align: center;
-    opacity: 0;
-    animation: fadeIn 1.5s forwards;
   }
   
   .section.light {
@@ -116,8 +97,7 @@ html {
   .section h2 {
     font-size: 2rem;
     color: #0b132b;
-    margin-bottom: 25px;
-    position: relative;
+    margin-bottom: 20px;
   }
   
   .section h2::after {
@@ -128,13 +108,6 @@ html {
     background: #00aaff;
     margin: 10px auto;
     border-radius: 5px;
-  }
-  
-  .section p {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1rem;
-    color: #444;
   }
   
   /* Skills */
@@ -151,19 +124,18 @@ html {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    transition: transform 0.2s ease-in-out;
   }
   
   .skill-card:hover {
     transform: translateY(-5px);
     border-color: #00aaff;
-    box-shadow: 0 6px 12px rgba(0, 170, 255, 0.15);
   }
   
   /* Projects */
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
     margin-top: 30px;
   }
@@ -211,7 +183,7 @@ html {
     color: white;
     padding: 10px 20px;
     border-radius: 6px;
-    transition: background 0.3s, transform 0.3s;
+    transition: all 0.3s;
   }
   
   .contact-links a:hover {
